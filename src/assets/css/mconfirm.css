@@ -1,0 +1,114 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    color: #333333;
+}
+
+body{
+    background-color: #f5f5f5;
+}
+
+#app{
+    margin: 15px 10px;
+}
+
+.address-box{
+    background-color: white;
+    padding:0 10px;
+    margin-bottom: 20px;
+}
+.address-box .title{
+    line-height: 50px;
+    font-size: 18px;
+    color: #333333;
+    font-weight: bold;
+}
+.address-box .address-list{
+    line-height: 50px;
+}
+.address-box .address-list .address{
+    border-top: 1px solid #f5f5f5;
+}
+.address-box .address-list .address.active{
+    background: url("../images/check.png") no-repeat right center;
+    background-size: 30px 30px;
+}
+
+.pay-box .pay{
+    display: flex;
+    align-items: center;
+}
+
+.pay-box .pay img{
+    width: 30px;
+    margin-left: 20px;
+}
+
+.goodlist-box{
+    margin-bottom: 60px;
+    background-color: white;
+    padding:0 10px;
+}
+.goodlist-box .title{
+    line-height: 50px;
+    font-size: 18px;
+    color: #333333;
+    font-weight: bold;
+}
+.goodlist-box .content .good{
+    padding: 10px 0;
+    border-top: 1px solid #f5f5f5;
+    display: flex;
+    align-items: center;
+}
+.goodlist-box .content .good .good-pic{
+    width: 20%;
+    margin-right: 10px;
+}
+.goodlist-box .content .good .good-pic img{
+    width: 100%;
+}
+.goodlist-box .content .good .good-desc{
+    line-height: 40px;
+    width: 40%;
+}
+.goodlist-box .content .good .good-desc .name{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.goodlist-box .content .good .good-count{
+    width: 20%;
+    text-align: center;
+}
+
+.goodlist-box .content .empty{
+    line-height: 60px;
+    text-align: center;
+}
+
+/*summary*/
+.summary{
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    line-height: 50px;
+
+}
+.summary .total{
+    color: white;
+    width: 70%;
+    padding-left: 25px;
+    background-color: #555555;
+}
+.summary .pay{
+    color: white;
+    width: 30%;
+    background-color: lightgreen;
+    text-align: center;
+}
+
+

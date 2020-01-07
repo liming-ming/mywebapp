@@ -1,0 +1,121 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    color: #333333;
+}
+.header .banner{
+    height: 180px;
+    background: url("../images/banner-2.png") no-repeat center;
+    background-size: cover;
+    position: relative;
+}
+.header  .banner img{
+    border-radius: 50%;
+    border: 4px solid rgba(0,0,0,0.12);
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%,50%);
+}
+
+.header .text{
+    text-align: center;
+    padding: 60px 0;
+}
+.header .text .name{
+    color: black;
+    margin-bottom: 12px;
+    font-size: 20px;
+}
+
+/*操作区*/
+.operators{
+    margin: 0 15px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eeeeee;
+}
+.operators ul{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.operators ul li.active{
+    color: red;
+}
+
+/*商品列表*/
+.goodlist{
+    margin: 0 15px;
+}
+.goodlist .good{
+    position: relative;
+    margin: 15px 0;
+    display: flex;
+}
+.goodlist .good .good-pic{
+    width: 30%;
+    margin-right: 15px;
+}
+.goodlist .good .good-pic img{
+    width: 100%;
+}
+.goodlist .good .good-desc{
+    line-height: 30px;
+    width: 70%;
+}
+.goodlist .good .good-desc .good-name{
+    /*设置单行文本不换行,显示多余的省略号*/
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 16px;
+    color: black;
+}
+.goodlist .good .good-desc .good-price .num{
+    color: red;
+}
+.goodlist .good .btn{
+    background-color: red;
+    color: white;
+    padding: 10px 20px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+/*购物车*/
+.cart{
+    position: fixed;
+    bottom: 100px;
+    right: 20px;
+    background-color: lightskyblue;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cart .total{
+    display: block;
+    position: absolute;
+    right: 5px;
+    top: 0;
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    text-align: center;
+    line-height: 16px;
+}
+.cart img{
+    width: 50%;
+}
+
+
+

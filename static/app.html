@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <!-- 引入样式 -->
+  <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+  <style type="text/css">
+    .app-main{
+      height: 300px;
+    }
+    .totop {
+      position: fixed;
+      right: 10px;
+      bottom: 20px;
+      width: 30px;
+      padding: 15px 0;
+      border: 1px solid #333;
+      text-align: center;
+    }
+    .content{
+      height: 500px;
+    }
+  </style>
+</head>
+<body>
+<div id="app">
+  <h1>element ui el-scrollbar组件监听滚动返回顶部</h1>
+
+  <el-scrollbar id="main" class="app-main" ref="myScrollbar">
+    <div class="content">
+      <h3>顶部</h3>
+    </div>
+    <div class="content">
+      <h3>Transfer 穿梭框</h3>
+    </div>
+    <div class="content">
+      <h3>Form 表单</h3>
+    </div>
+    <div class="content">
+      <h3>Table 表格</h3>
+    </div>
+    <div class="content">
+      <h3>Tag 标签</h3>
+    </div>
+  </el-scrollbar>
+
+  <div class="totop" v-show="visible" @click="totop">回顶部</div>
+
+</div>
+</body>
+<!-- 先引入 Vue -->
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+<!-- 引入组件库 -->
+<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+<script>
+  new Vue({
+    el: '#app',
+    data: function() {
+      return { visible: false }
+    },
+    mounted() {
+      this.handleScroll()
+    },
+    methods: {
+      handleScroll() {
+        let _self = this
+        let scrollbarEl = this.$refs.myScrollbar.wrap
+        scrollbarEl.onscroll = function() {
+          if(scrollbarEl.scrollTop > 200) {
+            _self.visible = true
+          } else {
+            _self.visible = false
+          }
+        }
+      },
+      totop() {
+        this.$refs.myScrollbar.wrap.scrollTop = 0
+      }
+    }
+  })
+</script>
+</html>
